@@ -22,7 +22,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.b_cancel.clicked.connect(self.close)
         self.ma_close.triggered.connect(self.close)
 
+        # Conncect recipe name typing
+        self.e_recipe_name.textChanged.connect(self.updateTitle)
+
         self.show()
+
+    def updateTitle(self):
+        """
+        Update the window title so it contains the name of the current recipe.
+        """
+        current_recipe_name = self.e_recipe_name.text()
+        if current_recipe_name:
+            self.setWindowTitle(f"{current_recipe_name} - WikiCookBook")
+        else:
+            self.setWindowTitle("WikiCookBook")
 
     def close(self):
         """
