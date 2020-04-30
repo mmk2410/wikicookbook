@@ -25,6 +25,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.show()
 
     def close(self):
+        """
+        Close the application. A warning is shown before.
+        """
         reply = QMessageBox.question(self, "Sicher?",
             "Möchten Sie wirklich schließen?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
