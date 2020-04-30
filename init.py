@@ -25,6 +25,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Conncect recipe name typing
         self.e_recipe_name.textChanged.connect(self.updateTitle)
 
+        # Handle category buttons
+        self.b_category_add.clicked.connect(self.category_add)
+        self.e_category.returnPressed.connect(self.category_add)
+        self.b_category_remove.clicked.connect(self.category_remove)
+
         self.show()
 
     def updateTitle(self):
@@ -36,6 +41,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.setWindowTitle(f"{current_recipe_name} - WikiCookBook")
         else:
             self.setWindowTitle("WikiCookBook")
+
+    def category_add(self):
+        if self.e_category.text():
+            self.v_categories.addItem(f"Kategorie{self.e_category.text()}")
+
+    def category_remove(self):
+        self.v_categories.takeItem(self.v_categories.currentRow())
 
     def close(self):
         """
