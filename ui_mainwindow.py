@@ -347,7 +347,7 @@ class Ui_MainWindow(object):
         self.menuBar.addAction(self.menuMen.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(7)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.e_recipe_name, self.e_servings)
         MainWindow.setTabOrder(self.e_servings, self.e_time)
