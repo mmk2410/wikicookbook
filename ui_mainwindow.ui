@@ -68,7 +68,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="t_basics">
        <attribute name="title">
@@ -213,7 +213,30 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_14">
         <item>
-         <widget class="QListWidget" name="v_ingredients"/>
+         <widget class="QTableWidget" name="v_ingredients">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Menge</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Zutat</string>
+           </property>
+          </column>
+         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_7">
