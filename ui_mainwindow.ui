@@ -68,7 +68,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="t_basics">
        <attribute name="title">
@@ -139,7 +139,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_16">
           <item>
-           <widget class="QListView" name="v_categories"/>
+           <widget class="QListWidget" name="v_categories"/>
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -213,7 +213,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_14">
         <item>
-         <widget class="QListView" name="v_ingredients"/>
+         <widget class="QListWidget" name="v_ingredients"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -302,7 +302,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
-         <widget class="QListView" name="v_utensils"/>
+         <widget class="QListWidget" name="v_utensils"/>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -401,7 +401,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListView" name="v_steps"/>
+         <widget class="QListWidget" name="v_steps"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -469,7 +469,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListView" name="v_notes"/>
+         <widget class="QListWidget" name="v_notes"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -537,7 +537,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListView" name="v_tips"/>
+         <widget class="QListWidget" name="v_tips"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -605,7 +605,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListView" name="v_variations"/>
+         <widget class="QListWidget" name="v_variations"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -673,7 +673,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QListView" name="v_ratings"/>
+         <widget class="QListWidget" name="v_ratings"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
