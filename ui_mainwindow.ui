@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Marcel Kapfer</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>WikiCookBook</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="y_buttons">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="b_create">
+        <property name="text">
+         <string>Rezept erstellen</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="b_cancel">
+        <property name="text">
+         <string>Abbrechen</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="t_basics">
+       <attribute name="title">
+        <string>Grundsätzliches</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <layout class="QGridLayout" name="y_basics">
+          <item row="2" column="0">
+           <widget class="QLabel" name="l_rating">
+            <property name="text">
+             <string>Bewertung</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="l_url">
+            <property name="text">
+             <string>Link</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="e_servings"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="e_url"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="l_recipe_name">
+            <property name="text">
+             <string>Rezeptname</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="e_time"/>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="e_recipe_name"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="l_servings">
+            <property name="text">
+             <string>Portionen</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="l_zeit">
+            <property name="text">
+             <string>Zeit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="e_rating_overall">
+            <property name="maximum">
+             <number>5</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QListView" name="v_categories"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <layout class="QGridLayout" name="y_category">
+              <item row="0" column="0">
+               <widget class="QLabel" name="l_category">
+                <property name="text">
+                 <string>Kategorie</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="e_category"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="b_remove_category_remove">
+                <property name="text">
+                 <string>Ausgewähltes entfernen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="b_category_add">
+                <property name="text">
+                 <string>Hinzufügen</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_ingredients">
+       <attribute name="title">
+        <string>Zutaten</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_14">
+        <item>
+         <widget class="QListView" name="v_ingredients"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QGridLayout" name="y_ingredient">
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="e_amount"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="l_ingredient">
+              <property name="text">
+               <string>Zutat</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="l_amount">
+              <property name="text">
+               <string>Menge</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="c_heading">
+              <property name="text">
+               <string>Zwischenüberschrift</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="e_ingredient"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_ingredient_remove">
+              <property name="text">
+               <string>Ausgewähltes entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_ingredient_add">
+              <property name="text">
+               <string>Hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_utensils">
+       <attribute name="title">
+        <string>Küchenutensilien</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <widget class="QListView" name="v_utensils"/>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QGridLayout" name="y_utensils">
+            <item row="0" column="0">
+             <widget class="QLabel" name="l_utensil">
+              <property name="text">
+               <string>Utensil</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="e_utensil"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_utensil_remove">
+              <property name="text">
+               <string>Ausgewähltes entfernen</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="b_utensil_add">
+              <property name="text">
+               <string>Hinzufügen</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_steps">
+       <attribute name="title">
+        <string>Zubereitung</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTextEdit" name="e_step"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_step_add">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListView" name="v_steps"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_step_edit">
+            <property name="text">
+             <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_step_remove">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_notes">
+       <attribute name="title">
+        <string>Notizen</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTextEdit" name="e_note"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_note_add">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListView" name="v_notes"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_note_edit">
+            <property name="text">
+             <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_note_remove">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_tips">
+       <attribute name="title">
+        <string>Tipps</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="e_tips"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="e_tip_add">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListView" name="v_tips"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_tip_edit">
+            <property name="text">
+             <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="e_tip_remove">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_variations">
+       <attribute name="title">
+        <string>Variantionen</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTextEdit" name="e_variation"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_variation_add">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListView" name="v_variations"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_variation_edit">
+            <property name="text">
+             <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_variation_remove">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="t_rating">
+       <attribute name="title">
+        <string>Bewertung</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTextEdit" name="e_rating"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_rating_add">
+            <property name="text">
+             <string>Hinzufügen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListView" name="v_ratings"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_rating_edit">
+            <property name="text">
+             <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_rating_remove">
+            <property name="text">
+             <string>Entfernen</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMen">
+    <property name="title">
+     <string>Me&amp;nü</string>
+    </property>
+    <addaction name="ma_information"/>
+    <addaction name="separator"/>
+    <addaction name="ma_close"/>
+   </widget>
+   <addaction name="menuMen"/>
+  </widget>
+  <action name="ma_close">
+   <property name="text">
+    <string>&amp;Schließen</string>
+   </property>
+  </action>
+  <action name="ma_information">
+   <property name="text">
+    <string>Informationen</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>e_recipe_name</tabstop>
+  <tabstop>e_servings</tabstop>
+  <tabstop>e_time</tabstop>
+  <tabstop>e_rating_overall</tabstop>
+  <tabstop>e_url</tabstop>
+  <tabstop>e_category</tabstop>
+  <tabstop>e_ingredient</tabstop>
+  <tabstop>c_heading</tabstop>
+  <tabstop>e_amount</tabstop>
+  <tabstop>v_ingredients</tabstop>
+  <tabstop>e_utensil</tabstop>
+  <tabstop>v_utensils</tabstop>
+  <tabstop>e_step</tabstop>
+  <tabstop>v_steps</tabstop>
+  <tabstop>e_note</tabstop>
+  <tabstop>v_notes</tabstop>
+  <tabstop>e_tips</tabstop>
+  <tabstop>v_tips</tabstop>
+  <tabstop>e_variation</tabstop>
+  <tabstop>v_variations</tabstop>
+  <tabstop>e_rating</tabstop>
+  <tabstop>v_ratings</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
