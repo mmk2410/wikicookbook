@@ -173,7 +173,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="b_remove_category_remove">
+               <widget class="QPushButton" name="b_category_remove">
                 <property name="text">
                  <string>Ausgewähltes entfernen</string>
                 </property>
