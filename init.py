@@ -34,6 +34,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.b_ingredient_add.clicked.connect(self.ingredient_add)
         self.b_ingredient_remove.clicked.connect(self.ingredient_remove)
 
+        # Handle utensils
+        self.b_utensil_add.clicked.connect(self.utensil_add)
+        self.e_utensil.returnPressed.connect(self.utensil_add)
+        self.b_utensil_remove.clicked.connect(self.utensil_remove)
+
         self.show()
 
     def updateTitle(self):
@@ -67,6 +72,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def ingredient_remove(self):
        self.v_ingredients.removeRow(self.v_ingredients.currentRow())
+
+    def utensil_add(self):
+        if self.e_utensil.text():
+            self.v_utensils.addItem(self.e_utensil.text())
+
+    def utensil_remove(self):
+        self.v_utensils.takeItem(self.v_utensils.currentRow())
 
     def close(self):
         """
