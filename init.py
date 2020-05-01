@@ -57,7 +57,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if self.c_heading.checkState() == 2 or self.e_amount.text():
             if self.e_ingredient.text():
                 if self.c_heading.checkState() == 2:
-                    current_amount = QTableWidgetItem("")
+                    current_amount = QTableWidgetItem("----------")
                 else:
                     current_amount = QTableWidgetItem(self.e_amount.text())
                 current_ingredient = QTableWidgetItem(self.e_ingredient.text())
