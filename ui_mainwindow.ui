@@ -68,7 +68,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="t_basics">
        <attribute name="title">
@@ -449,6 +449,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="b_step_replace">
+            <property name="text">
+             <string>Ersetzen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="b_step_remove">
             <property name="text">
              <string>Entfernen</string>
@@ -513,6 +520,13 @@
            <widget class="QPushButton" name="b_note_edit">
             <property name="text">
              <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="b_note_replace">
+            <property name="text">
+             <string>Ersetzen</string>
             </property>
            </widget>
           </item>
@@ -585,6 +599,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="b_tip_replace">
+            <property name="text">
+             <string>Ersetzen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="e_tip_remove">
             <property name="text">
              <string>Entfernen</string>
@@ -653,6 +674,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="b_variation_replace">
+            <property name="text">
+             <string>Ersetzen</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="b_variation_remove">
             <property name="text">
              <string>Entfernen</string>
@@ -717,6 +745,13 @@
            <widget class="QPushButton" name="b_rating_edit">
             <property name="text">
              <string>Bearbeiten</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Ersetzen</string>
             </property>
            </widget>
           </item>
