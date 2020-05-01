@@ -547,7 +547,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QTextEdit" name="e_tips"/>
+         <widget class="QTextEdit" name="e_tip"/>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -565,7 +565,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="e_tip_add">
+           <widget class="QPushButton" name="b_tip_add">
             <property name="text">
              <string>Hinzufügen</string>
             </property>
@@ -606,7 +606,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="e_tip_remove">
+           <widget class="QPushButton" name="b_tip_remove">
             <property name="text">
              <string>Entfernen</string>
             </property>
@@ -749,7 +749,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="b_rating_replace">
             <property name="text">
              <string>Ersetzen</string>
             </property>
@@ -817,7 +817,7 @@
   <tabstop>v_steps</tabstop>
   <tabstop>e_note</tabstop>
   <tabstop>v_notes</tabstop>
-  <tabstop>e_tips</tabstop>
+  <tabstop>e_tip</tabstop>
   <tabstop>v_tips</tabstop>
   <tabstop>e_variation</tabstop>
   <tabstop>v_variations</tabstop>
