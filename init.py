@@ -39,6 +39,36 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.e_utensil.returnPressed.connect(self.utensil_add)
         self.b_utensil_remove.clicked.connect(self.utensil_remove)
 
+        # Handle steps
+        self.b_step_add.clicked.connect(self.step_add)
+        self.b_step_edit.clicked.connect(self.step_edit)
+        self.b_step_replace.clicked.connect(self.step_replace)
+        self.b_step_remove.clicked.connect(self.step_remove)
+
+        # Handle notes
+        self.b_note_add.clicked.connect(self.note_add)
+        self.b_note_edit.clicked.connect(self.note_edit)
+        self.b_note_replace.clicked.connect(self.note_replace)
+        self.b_note_remove.clicked.connect(self.note_remove)
+
+        # Handle tips
+        self.b_tip_add.clicked.connect(self.tip_add)
+        self.b_tip_edit.clicked.connect(self.tip_edit)
+        self.b_tip_replace.clicked.connect(self.tip_replace)
+        self.b_tip_remove.clicked.connect(self.tip_remove)
+
+        # Handle variations
+        self.b_variation_add.clicked.connect(self.variation_add)
+        self.b_variation_edit.clicked.connect(self.variation_edit)
+        self.b_variation_replace.clicked.connect(self.variation_replace)
+        self.b_variation_remove.clicked.connect(self.variation_remove)
+
+        # Handle ratings
+        self.b_rating_add.clicked.connect(self.rating_add)
+        self.b_rating_edit.clicked.connect(self.rating_edit)
+        self.b_rating_replace.clicked.connect(self.rating_replace)
+        self.b_rating_remove.clicked.connect(self.rating_remove)
+
         self.show()
 
     def updateTitle(self):
@@ -79,6 +109,81 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def utensil_remove(self):
         self.v_utensils.takeItem(self.v_utensils.currentRow())
+
+    def step_add(self):
+        if self.e_step.toPlainText():
+            self.v_steps.addItem(self.e_step.toPlainText())
+
+    def step_edit(self):
+        if self.v_steps.count() > 0:
+            self.e_step.setText(self.v_steps.currentItem().text())
+
+    def step_replace(self):
+        if self.e_step.toPlainText() and self.v_steps.count() > 0:
+            self.v_steps.currentItem().setText(self.e_step.toPlainText())
+
+    def step_remove(self):
+        self.v_steps.takeItem(self.v_steps.currentRow())
+
+    def note_add(self):
+        if self.e_note.toPlainText():
+            self.v_notes.addItem(self.e_note.toPlainText())
+
+    def note_edit(self):
+        if self.v_notes.count() > 0:
+            self.e_note.setText(self.v_notes.currentItem().text())
+
+    def note_replace(self):
+        if self.e_note.toPlainText() and self.v_notes.count() > 0:
+            self.v_notes.currentItem().setText(self.e_note.toPlainText())
+
+    def note_remove(self):
+        self.v_notes.takeItem(self.v_notes.currentRow())
+
+    def tip_add(self):
+        if self.e_tip.toPlainText():
+            self.v_tips.addItem(self.e_tip.toPlainText())
+
+    def tip_edit(self):
+        if self.v_tips.count() > 0:
+            self.e_tip.setText(self.v_tips.currentItem().text())
+
+    def tip_replace(self):
+        if self.e_tip.toPlainText() and self.v_tips.count() > 0:
+            self.v_tips.currentItem().setText(self.e_tip.toPlainText())
+
+    def tip_remove(self):
+        self.v_tips.takeItem(self.v_tips.currentRow())
+
+    def variation_add(self):
+        if self.e_variation.toPlainText():
+            self.v_variations.addItem(self.e_variation.toPlainText())
+
+    def variation_edit(self):
+        if self.v_variations.count() > 0:
+            self.e_variation.setText(self.v_variations.currentItem().text())
+
+    def variation_replace(self):
+        if self.e_variation.toPlainText() and self.v_variations.count() > 0:
+            self.v_variations.currentItem().setText(self.e_variation.toPlainText())
+
+    def variation_remove(self):
+        self.v_variations.takeItem(self.v_variations.currentRow())
+
+    def rating_add(self):
+        if self.e_rating.toPlainText():
+            self.v_ratings.addItem(self.e_rating.toPlainText())
+
+    def rating_edit(self):
+        if self.v_ratings.count() > 0:
+            self.e_rating.setText(self.v_ratings.currentItem().text())
+
+    def rating_replace(self):
+        if self.e_rating.toPlainText() and self.v_ratings.count() > 0:
+            self.v_ratings.currentItem().setText(self.e_rating.toPlainText())
+
+    def rating_remove(self):
+        self.v_ratings.takeItem(self.v_ratings.currentRow())
 
     def close(self):
         """
