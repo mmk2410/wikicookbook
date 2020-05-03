@@ -13,6 +13,22 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem
 from ui_mainwindow import Ui_MainWindow
 
+class WikiCodeDialog(QDialog, Ui_WikiCode):
+    def __init__(self, code, *args, **kwargs):
+        super(WikiCodeDialog, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+
+        self.e_code.setPlainText(code)
+
+        self.b_close.clicked.connect(self.close)
+        self.b_copy.clicked.connect(self.copy)
+
+        self.show()
+
+    def copy(self):
+        self.e_code.selectAll()
+        self.e_code.copy()
+
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
