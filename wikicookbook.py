@@ -10,8 +10,21 @@ MIT License
 """
 
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem
+import recipe
+from writer.MoinMoinWriter import MoinMoinWriter
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem, QDialog
 from ui_mainwindow import Ui_MainWindow
+from ui_code_dialog import Ui_WikiCode
+from ui_about_dialog import Ui_About
+
+class AboutDialog(QDialog, Ui_About):
+    def __init__(self, *args, **kwargs):
+        super(AboutDialog, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+
+        self.b_close.clicked.connect(self.close)
+
+        self.show()
 
 class WikiCodeDialog(QDialog, Ui_WikiCode):
     def __init__(self, code, *args, **kwargs):
@@ -37,6 +50,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Connect close actions
         self.b_cancel.clicked.connect(self.close)
         self.ma_close.triggered.connect(self.close)
+
+        # Connect about action
+        self.ma_information.triggered.connect(self.about)
 
         # Conncect recipe name typing
         self.e_recipe_name.textChanged.connect(self.updateTitle)
@@ -251,6 +267,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         dialog = WikiCodeDialog(code)
         dialog.exec_()
+
+    def about(self):
+        """
+        Show an about dialog.
+        """
+        dialog = AboutDialog()
+        dialog.exec_()
+
     def close(self):
         """
         Close the application. A warning is shown before.
