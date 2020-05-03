@@ -69,6 +69,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.b_rating_replace.clicked.connect(self.rating_replace)
         self.b_rating_remove.clicked.connect(self.rating_remove)
 
+        # Handle recipe creation
+        self.b_create.clicked.connect(self.create_recipe)
+
         self.show()
 
     def updateTitle(self):
