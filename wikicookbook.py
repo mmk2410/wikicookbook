@@ -185,6 +185,53 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def rating_remove(self):
         self.v_ratings.takeItem(self.v_ratings.currentRow())
 
+    def create_recipe(self):
+        current_recipe = recipe.Recipe(self.e_recipe_name.text(),
+                                       self.e_servings.text(),
+                                       self.e_time.text(),
+                                       self.e_rating_overall.value(),
+                                       self.e_url.text())
+
+        # Categories
+        for row in range(self.v_categories.count()):
+            current_recipe.add_category(self.v_categories.item(row).text())
+
+        # Ingredients
+        for row in range(self.v_ingredients.rowCount()):
+            current_recipe.add_ingredient(
+                self.v_ingredients.item(row, 0).text(),
+                self.v_ingredients.item(row, 1).text()
+            )
+
+        # Utensils
+        for row in range(self.v_utensils.count()):
+            current_recipe.add_utensil(self.v_utensils.item(row).text())
+
+        # Steps
+        for row in range(self.v_steps.count()):
+            current_recipe.add_step(self.v_steps.item(row).text())
+
+        # Notes
+        for row in range(self.v_notes.count()):
+            current_recipe.add_note(self.v_notes.item(row).text())
+
+        # Tips
+        for row in range(self.v_tips.count()):
+            current_recipe.add_tip(self.v_tips.item(row).text())
+
+        # Variations
+        for row in range(self.v_variations.count()):
+            current_recipe.add_variation(self.v_variations.item(row).text())
+
+        # Ratings
+        for row in range(self.v_ratings.count()):
+            current_recipe.add_rating(self.v_ratings.item(row).text())
+
+        writer = MoinMoinWriter()
+        code = current_recipe.wikicode(writer)
+
+        dialog = WikiCodeDialog(code)
+        dialog.exec_()
     def close(self):
         """
         Close the application. A warning is shown before.
