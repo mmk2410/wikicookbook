@@ -57,6 +57,16 @@
     </widget>
    </item>
    <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Version 0.1.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="l_basedon">
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Based on &lt;a href=&quot;https://www.python.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#4c6b8a;&quot;&gt;Python&lt;/span&gt;&lt;/a&gt; and &lt;a href=&quot;https://www.riverbankcomputing.com/software/pyqt/intro&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#4c6b8a;&quot;&gt;PyQt&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
