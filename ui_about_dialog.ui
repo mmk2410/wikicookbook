@@ -69,7 +69,7 @@
    <item>
     <widget class="QLabel" name="l_copyright">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2020 © Marcel Kapfer (opensource@mmk2410.org)&lt;br/&gt;MIT License&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;2020 © Marcel Kapfer (opensource@mmk2410.org)&lt;br/&gt;Licensed under GPLv3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

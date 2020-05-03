@@ -67,6 +67,6 @@ class Ui_About(object):
         self.l_title.setText(_translate("About", "WikiCookBook"))
         self.l_description.setText(_translate("About", "A graphical editor for creating cookbook entries using the MoinMoin wiki syntax"))
         self.l_basedon.setText(_translate("About", "<html><head/><body><p>Based on <a href=\"https://www.python.org/\"><span style=\" text-decoration: underline; color:#4c6b8a;\">Python</span></a> and <a href=\"https://www.riverbankcomputing.com/software/pyqt/intro\"><span style=\" text-decoration: underline; color:#4c6b8a;\">PyQt</span></a>.</p></body></html>"))
-        self.l_copyright.setText(_translate("About", "<html><head/><body><p>2020 © Marcel Kapfer (opensource@mmk2410.org)<br/>MIT License</p></body></html>"))
+        self.l_copyright.setText(_translate("About", "<html><head/><body><p>2020 © Marcel Kapfer (opensource@mmk2410.org)<br/>Licensed under GPL v3</p></body></html>"))
         self.l_sourcecode.setText(_translate("About", "<html><head/><body><p>Sourcecode available at<br/><a href=\"https://git.mmk2410.org/mmk2410/wikicookbook\"><span style=\" text-decoration: underline; color:#4c6b8a;\">git.mmk2410.org/mmk2410/wikicookbook</span></a></p></body></html>"))
         self.b_close.setText(_translate("About", "Schließen"))
