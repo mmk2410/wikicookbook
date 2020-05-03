@@ -283,10 +283,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             "Möchten Sie wirklich schließen?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         if reply == QMessageBox.Yes:
-            sys.exit(0)
+            super.close()
 
 if __name__ == "__main__":
     app = QApplication([])
     app.setApplicationName("WikiCookBook")
     window = MainWindow()
-    app.exec_()
+    sys.exit(app.exec_())
