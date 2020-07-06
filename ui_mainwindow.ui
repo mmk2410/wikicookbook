@@ -634,7 +634,7 @@
       </widget>
       <widget class="QWidget" name="t_variations">
        <attribute name="title">
-        <string>Variantionen</string>
+        <string>Variationen</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>

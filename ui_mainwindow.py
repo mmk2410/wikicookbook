@@ -447,7 +447,7 @@ class Ui_MainWindow(object):
         self.b_variation_edit.setText(_translate("MainWindow", "Bearbeiten"))
         self.b_variation_replace.setText(_translate("MainWindow", "Ersetzen"))
         self.b_variation_remove.setText(_translate("MainWindow", "Entfernen"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.t_variations), _translate("MainWindow", "Variantionen"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.t_variations), _translate("MainWindow", "Variationen"))
         self.b_rating_add.setText(_translate("MainWindow", "Hinzufügen"))
         self.b_rating_edit.setText(_translate("MainWindow", "Bearbeiten"))
         self.b_rating_replace.setText(_translate("MainWindow", "Ersetzen"))
