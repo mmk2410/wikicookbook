@@ -114,7 +114,7 @@ class Recipe():
         code.append(writer.table_cell(self.servings, f"{style_info_contentrow} {style_info_content}"))
         code.append(writer.table_cell(self.time, style_info_content))
         code.append(writer.table_cell("🟢" * self.rating + "⚪" * (5 - self.rating), style_info_content))
-        code.append(writer.table_cell(writer.link("Quelle", self.url), style_info_content))
+        code.append(writer.table_cell(writer.link(self.name, self.url), style_info_content))
         code.append(writer.table_row_end())
         code.append(writer.newline())
         code.append(writer.linebreak())
