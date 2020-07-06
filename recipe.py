@@ -176,7 +176,7 @@ class Recipe():
             code.append(writer.table_row_end())
 
             for item in items:
-                code.append(writer.olitem(item))
+                code.append(writer.ulitem(item))
                 code.append(writer.newline())
 
         return code
