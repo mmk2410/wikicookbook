@@ -136,16 +136,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.v_categories.takeItem(self.v_categories.currentRow())
 
     def ingredient_add(self):
-        if self.c_heading.checkState() == 2 or self.e_amount.text():
-            if self.e_ingredient.text():
-                if self.c_heading.checkState() == 2:
-                    current_amount = QTableWidgetItem("----------")
-                else:
-                    current_amount = QTableWidgetItem(self.e_amount.text())
-                current_ingredient = QTableWidgetItem(self.e_ingredient.text())
-                self.v_ingredients.setRowCount(self.v_ingredients.rowCount() + 1)
-                self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 0, current_amount)
-                self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 1, current_ingredient)
+        if self.e_ingredient.text():
+            if self.c_heading.checkState() == 2:
+                current_amount = QTableWidgetItem("----------")
+            else:
+                current_amount = QTableWidgetItem(self.e_amount.text())
+            current_ingredient = QTableWidgetItem(self.e_ingredient.text())
+            self.v_ingredients.setRowCount(self.v_ingredients.rowCount() + 1)
+            self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 0, current_amount)
+            self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 1, current_ingredient)
 
     def ingredient_remove(self):
        self.v_ingredients.removeRow(self.v_ingredients.currentRow())
