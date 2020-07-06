@@ -147,7 +147,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 1, current_ingredient)
 
     def ingredient_remove(self):
-       self.v_ingredients.removeRow(self.v_ingredients.currentRow())
+        self.v_ingredients.removeRow(self.v_ingredients.currentRow())
 
     def utensil_add(self):
         if self.e_utensil.text():
