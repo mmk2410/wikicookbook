@@ -277,6 +277,49 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         code = current_recipe.wikicode(writer)
 
         dialog = WikiCodeDialog(code)
+    def clear(self):
+        """
+        Clear all fields
+        """
+
+        # Tab: Basics
+        self.e_recipe_name.setText("")
+        self.e_servings.setText("")
+        self.e_time.setText("")
+        self.e_rating_overall.setValue(3)
+        self.e_url.setText("")
+        self.e_category.setText("")
+        self.v_categories.clear()
+
+        # Tab: Ingredients
+        self.e_ingredient.setText("")
+        self.e_amount.setText("")
+        self.c_heading.setChecked(False)
+        self.v_ingredients.clear()
+
+        # Tab: Utensils
+        self.e_utensil.setText("")
+        self.v_utensils.clear()
+
+        # Tab: Steps
+        self.e_step.setText("")
+        self.v_steps.clear()
+
+        # Tab: Notes
+        self.e_note.setText("")
+        self.v_notes.clear()
+
+        # Tab: Tips
+        self.e_tip.setText("")
+        self.v_tips.clear()
+
+        # Tab: Variations
+        self.e_variation.setText("")
+        self.v_variations.clear()
+
+        # Tab: Ratings
+        self.e_rating.setText("")
+        self.v_ratings.clear()
         dialog.exec_()
 
     def about(self):
