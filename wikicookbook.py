@@ -63,8 +63,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.b_cancel.clicked.connect(self.close)
         self.ma_close.triggered.connect(self.close)
 
-        # Connect about action
+        # Connect other menu actions
         self.ma_information.triggered.connect(self.about)
+        self.ma_clear_fields.triggered.connect(self.clear_fields)
 
         # Conncect recipe name typing
         self.e_recipe_name.textChanged.connect(self.updateTitle)
@@ -320,6 +321,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # Tab: Ratings
         self.e_rating.setText("")
         self.v_ratings.clear()
+
+    def clear_fields(self):
+        """
+        Show the clear fields dialog.
+        """
+        dialog = ClearDialog()
+        dialog.accepted.connect(self.clear)
         dialog.exec_()
 
     def about(self):
@@ -338,6 +346,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         if reply == QMessageBox.Yes:
             super.close()
+
 
 if __name__ == "__main__":
     app = QApplication([])
