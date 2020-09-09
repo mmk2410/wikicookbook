@@ -53,10 +53,11 @@ class WikiCodeDialog(QDialog, Ui_WikiCode):
     def __init__(self, code, *args, **kwargs):
         super(WikiCodeDialog, self).__init__(*args, **kwargs)
         self.setupUi(self)
+        self.copied = False
 
         self.e_code.setPlainText(code)
 
-        self.b_close.clicked.connect(self.close)
+        self.b_close.clicked.connect(self.clear_fields)
         self.b_copy.clicked.connect(self.copy)
 
         self.show()
@@ -64,6 +65,20 @@ class WikiCodeDialog(QDialog, Ui_WikiCode):
     def copy(self):
         self.e_code.selectAll()
         self.e_code.copy()
+        self.copied = True
+
+    def clear_fields(self):
+        """
+        Show the clear fields dialog if the code was at least copied once.
+        """
+        if self.copied:
+            dialog = ClearDialog()
+            dialog.rejected.connect(self.reject)
+            dialog.accepted.connect(self.accept)
+            dialog.exec_()
+        else:
+            self.close()
+
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
@@ -289,6 +304,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         code = current_recipe.wikicode(writer)
 
         dialog = WikiCodeDialog(code)
+        dialog.accepted.connect(self.clear)
+        dialog.exec_()
+
     def clear(self):
         """
         Clear all fields
