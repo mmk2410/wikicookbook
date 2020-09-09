@@ -98,13 +98,6 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="3">
-           <widget class="QLineEdit" name="e_url">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="0">
            <widget class="QLabel" name="l_recipe_name">
             <property name="text">
@@ -147,6 +140,13 @@
             </property>
             <property name="value">
              <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QLineEdit" name="e_url">
+            <property name="text">
+             <string/>
             </property>
            </widget>
           </item>
@@ -792,19 +792,26 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>30</height>
+     <height>28</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMen">
     <property name="title">
      <string>Me&amp;nü</string>
     </property>
+    <addaction name="ma_clear_fields"/>
+    <addaction name="separator"/>
     <addaction name="ma_information"/>
     <addaction name="separator"/>
     <addaction name="ma_close"/>
    </widget>
    <addaction name="menuMen"/>
   </widget>
+  <action name="ma_clear_fields">
+   <property name="text">
+    <string>Eingaben löschen</string>
+   </property>
+  </action>
   <action name="ma_close">
    <property name="text">
     <string>&amp;Schließen</string>
