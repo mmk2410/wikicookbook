@@ -397,11 +397,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         Close the application. A warning is shown before.
         """
-        reply = QMessageBox.question(self, "Sicher?",
-            "Möchten Sie wirklich schließen?",
-            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-        if reply == QMessageBox.Yes:
-            self.close()
+        dialog = CloseDialog()
+        dialog.accepted.connect(self.close)
+        dialog.exec_()
 
 
 if __name__ == "__main__":
