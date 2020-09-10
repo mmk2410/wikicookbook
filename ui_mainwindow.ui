@@ -200,6 +200,9 @@
                 <property name="text">
                  <string>Hinzufügen</string>
                 </property>
+                <property name="autoDefault">
+                 <bool>true</bool>
+                </property>
                </widget>
               </item>
              </layout>
@@ -314,6 +317,9 @@
               <property name="text">
                <string>Hinzufügen</string>
               </property>
+              <property name="autoDefault">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -386,6 +392,9 @@
               <property name="text">
                <string>Hinzufügen</string>
               </property>
+              <property name="autoDefault">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -434,6 +443,9 @@
            <widget class="QPushButton" name="b_step_add">
             <property name="text">
              <string>Hinzufügen</string>
+            </property>
+            <property name="autoDefault">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -510,6 +522,9 @@
             <property name="text">
              <string>Hinzufügen</string>
             </property>
+            <property name="autoDefault">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -584,6 +599,9 @@
            <widget class="QPushButton" name="b_tip_add">
             <property name="text">
              <string>Hinzufügen</string>
+            </property>
+            <property name="autoDefault">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -660,6 +678,9 @@
             <property name="text">
              <string>Hinzufügen</string>
             </property>
+            <property name="autoDefault">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -734,6 +755,9 @@
            <widget class="QPushButton" name="b_rating_add">
             <property name="text">
              <string>Hinzufügen</string>
+            </property>
+            <property name="autoDefault">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -830,22 +854,52 @@
   <tabstop>e_rating_overall</tabstop>
   <tabstop>e_url</tabstop>
   <tabstop>e_category</tabstop>
+  <tabstop>b_category_add</tabstop>
+  <tabstop>v_categories</tabstop>
+  <tabstop>b_category_remove</tabstop>
   <tabstop>e_ingredient</tabstop>
   <tabstop>c_heading</tabstop>
   <tabstop>e_amount</tabstop>
+  <tabstop>b_ingredient_add</tabstop>
   <tabstop>v_ingredients</tabstop>
+  <tabstop>b_ingredient_remove</tabstop>
   <tabstop>e_utensil</tabstop>
+  <tabstop>b_utensil_add</tabstop>
   <tabstop>v_utensils</tabstop>
+  <tabstop>b_utensil_remove</tabstop>
   <tabstop>e_step</tabstop>
+  <tabstop>b_step_add</tabstop>
   <tabstop>v_steps</tabstop>
+  <tabstop>b_step_edit</tabstop>
+  <tabstop>b_step_replace</tabstop>
+  <tabstop>b_step_remove</tabstop>
   <tabstop>e_note</tabstop>
+  <tabstop>b_note_add</tabstop>
   <tabstop>v_notes</tabstop>
+  <tabstop>b_note_edit</tabstop>
+  <tabstop>b_note_replace</tabstop>
+  <tabstop>b_note_remove</tabstop>
   <tabstop>e_tip</tabstop>
+  <tabstop>b_tip_add</tabstop>
   <tabstop>v_tips</tabstop>
+  <tabstop>b_tip_edit</tabstop>
+  <tabstop>b_tip_replace</tabstop>
+  <tabstop>b_tip_remove</tabstop>
   <tabstop>e_variation</tabstop>
+  <tabstop>b_variation_add</tabstop>
   <tabstop>v_variations</tabstop>
+  <tabstop>b_variation_edit</tabstop>
+  <tabstop>b_variation_replace</tabstop>
+  <tabstop>b_variation_remove</tabstop>
   <tabstop>e_rating</tabstop>
+  <tabstop>b_rating_add</tabstop>
   <tabstop>v_ratings</tabstop>
+  <tabstop>b_rating_edit</tabstop>
+  <tabstop>b_rating_replace</tabstop>
+  <tabstop>b_rating_remove</tabstop>
+  <tabstop>b_create</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>b_cancel</tabstop>
  </tabstops>
  <resources/>
  <connections/>
