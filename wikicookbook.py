@@ -29,6 +29,7 @@ from ui_mainwindow import Ui_MainWindow
 from ui_code_dialog import Ui_WikiCode
 from ui_about_dialog import Ui_About
 from ui_clear_dialog import Ui_ClearDialog
+from ui_close_dialog import Ui_CloseDialog
 
 class AboutDialog(QDialog, Ui_About):
     def __init__(self, *args, **kwargs):
@@ -36,6 +37,16 @@ class AboutDialog(QDialog, Ui_About):
         self.setupUi(self)
 
         self.b_close.clicked.connect(self.close)
+
+        self.show()
+
+class CloseDialog(QDialog, Ui_CloseDialog):
+    def __init__(self, *args, **kwargs):
+        super(CloseDialog, self).__init__(*args, **kwargs)
+        self.setupUi(self)
+
+        self.b_yes.clicked.connect(self.accept)
+        self.b_no.clicked.connect(self.reject)
 
         self.show()
 
