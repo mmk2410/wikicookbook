@@ -86,8 +86,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         # Connect close actions
-        self.b_cancel.clicked.connect(self.close)
-        self.ma_close.triggered.connect(self.close)
+        self.b_cancel.clicked.connect(self.ask_close)
+        self.ma_close.triggered.connect(self.ask_close)
 
         # Connect other menu actions
         self.ma_information.triggered.connect(self.about)
@@ -382,7 +382,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         dialog = AboutDialog()
         dialog.exec_()
 
-    def close(self):
+    def ask_close(self):
         """
         Close the application. A warning is shown before.
         """
@@ -390,7 +390,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             "Möchten Sie wirklich schließen?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
         if reply == QMessageBox.Yes:
-            super.close()
+            self.close()
 
 
 if __name__ == "__main__":
