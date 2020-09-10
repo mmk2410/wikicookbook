@@ -158,6 +158,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def category_add(self):
         if self.e_category.text():
             self.v_categories.addItem(f"Kategorie{self.e_category.text()}")
+            self.e_category.setFocus()
+            self.e_category.selectAll()
 
     def category_remove(self):
         self.v_categories.takeItem(self.v_categories.currentRow())
@@ -172,6 +174,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.v_ingredients.setRowCount(self.v_ingredients.rowCount() + 1)
             self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 0, current_amount)
             self.v_ingredients.setItem(self.v_ingredients.rowCount() - 1, 1, current_ingredient)
+            self.e_ingredient.setFocus()
+            self.e_ingredient.selectAll()
 
     def ingredient_remove(self):
         self.v_ingredients.removeRow(self.v_ingredients.currentRow())
@@ -179,6 +183,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def utensil_add(self):
         if self.e_utensil.text():
             self.v_utensils.addItem(self.e_utensil.text())
+            self.e_utensil.setFocus()
+            self.e_utensil.selectAll()
 
     def utensil_remove(self):
         self.v_utensils.takeItem(self.v_utensils.currentRow())
@@ -186,6 +192,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def step_add(self):
         if self.e_step.toPlainText():
             self.v_steps.addItem(self.e_step.toPlainText())
+            self.e_step.setFocus()
+            self.e_step.selectAll()
 
     def step_edit(self):
         if self.v_steps.count() > 0:
@@ -201,6 +209,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def note_add(self):
         if self.e_note.toPlainText():
             self.v_notes.addItem(self.e_note.toPlainText())
+            self.e_note.setFocus()
+            self.e_note.selectAll()
 
     def note_edit(self):
         if self.v_notes.count() > 0:
@@ -216,6 +226,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def tip_add(self):
         if self.e_tip.toPlainText():
             self.v_tips.addItem(self.e_tip.toPlainText())
+            self.e_tip.setFocus()
+            self.e_tip.selectAll()
 
     def tip_edit(self):
         if self.v_tips.count() > 0:
@@ -231,6 +243,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def variation_add(self):
         if self.e_variation.toPlainText():
             self.v_variations.addItem(self.e_variation.toPlainText())
+            self.e_variation.setFocus()
+            self.e_variation.selectAll()
 
     def variation_edit(self):
         if self.v_variations.count() > 0:
@@ -246,6 +260,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def rating_add(self):
         if self.e_rating.toPlainText():
             self.v_ratings.addItem(self.e_rating.toPlainText())
+            self.e_rating.setFocus()
+            self.e_rating.selectAll()
 
     def rating_edit(self):
         if self.v_ratings.count() > 0:
