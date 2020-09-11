@@ -1,0 +1,28 @@
+#+title: CHANGELOG
+
+* Version 0.2.0
+
+** Features
+
+   - It is now possible to clear/reset all input fields (cb139c6,
+     2b9e229, ba3a575, 371ff3f, f51e5ed)
+   - Clearing all fields is now also offered when closing the code
+     dialog after copying the content at least once (3fe735e)
+   - Focus input field after acting on the corresponding add-button
+     and select text (38e0337)
+   - It is now possible to active the "add" buttons with the enter key
+     (dec5ccd)
+
+** Bugfixes
+
+   - Display listings as unordered list (8077316)
+   - Recipe name for source URL text (01f8bdd)
+   - Allow ingredients without specifying an amount (094dd51)
+   - Fixed typo "Variantionen" (32b4c7a)
+   - Close without crashing (02f9129)
+   - Provide custom close dialog for translated buttons (97b16d1,
+     7b7b92b, 960258e)
+
+* Version 0.1.0
+
+  - Initial release
