@@ -3,3 +3,20 @@
 WikiCookBook is a simple graphical editor for creating MoinMoin wiki pages for recipes.
 
 It is based on [[https://www.python.org][Python]], [[https://www.qt.io/][QT]] and [[https://www.riverbankcomputing.com/software/pyqt/intro][PyQt]].
+
+* Building
+
+** Microsoft nWindows
+
+Building in Microsoft Windows happens with pyinstaller. Here the complete process.
+
+#+BEGIN_SRC shell
+git clone git@git.mmk2410.org:mmk2410/wikicookbook
+cd wikicookbook
+python -m venv venv
+.\venv\Scripts\activate.bat
+pip install -r requirements.txt
+.\venv\Scripts\pyinstaller.exe --onefile --windowed wikicookbook.py
+#+END_SRC
+
+The result can the be found in the =dist= directory.
