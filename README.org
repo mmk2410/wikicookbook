@@ -1,0 +1,5 @@
+#+title: WikiCookBook
+
+WikiCookBook is a simple graphical editor for creating MoinMoin wiki pages for recipes.
+
+It is based on [[https://www.python.org][Python]], [[https://www.qt.io/][QT]] and [[https://www.riverbankcomputing.com/software/pyqt/intro][PyQt]].
