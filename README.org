@@ -6,7 +6,7 @@ It is based on [[https://www.python.org][Python]], [[https://www.qt.io/][QT]] an
 
 * Building
 
-** Microsoft nWindows
+** Microsoft Windows
 
 Building in Microsoft Windows happens with pyinstaller. Here the complete process.
 
