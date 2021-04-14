@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui_close_dialog.ui'
+# Form implementation generated from reading ui file 'ui_clear_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.0
 #
@@ -11,24 +11,24 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_CloseDialog(object):
-    def setupUi(self, CloseDialog):
-        CloseDialog.setObjectName("CloseDialog")
-        CloseDialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        CloseDialog.resize(313, 75)
+class ClearDialog(object):
+    def setupUi(self, ClearDialog):
+        ClearDialog.setObjectName("ClearDialog")
+        ClearDialog.setWindowModality(QtCore.Qt.ApplicationModal)
+        ClearDialog.resize(265, 75)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(CloseDialog.sizePolicy().hasHeightForWidth())
-        CloseDialog.setSizePolicy(sizePolicy)
-        self.verticalLayout = QtWidgets.QVBoxLayout(CloseDialog)
+        sizePolicy.setHeightForWidth(ClearDialog.sizePolicy().hasHeightForWidth())
+        ClearDialog.setSizePolicy(sizePolicy)
+        self.verticalLayout = QtWidgets.QVBoxLayout(ClearDialog)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.t_close = QtWidgets.QLabel(CloseDialog)
-        self.t_close.setObjectName("t_close")
-        self.verticalLayout.addWidget(self.t_close)
+        self.t_clear = QtWidgets.QLabel(ClearDialog)
+        self.t_clear.setObjectName("t_clear")
+        self.verticalLayout.addWidget(self.t_clear)
         self.l_buttons = QtWidgets.QHBoxLayout()
         self.l_buttons.setObjectName("l_buttons")
-        self.b_yes = QtWidgets.QPushButton(CloseDialog)
+        self.b_yes = QtWidgets.QPushButton(ClearDialog)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -36,17 +36,17 @@ class Ui_CloseDialog(object):
         self.b_yes.setSizePolicy(sizePolicy)
         self.b_yes.setObjectName("b_yes")
         self.l_buttons.addWidget(self.b_yes)
-        self.b_no = QtWidgets.QPushButton(CloseDialog)
+        self.b_no = QtWidgets.QPushButton(ClearDialog)
         self.b_no.setObjectName("b_no")
         self.l_buttons.addWidget(self.b_no)
         self.verticalLayout.addLayout(self.l_buttons)
 
-        self.retranslateUi(CloseDialog)
-        QtCore.QMetaObject.connectSlotsByName(CloseDialog)
+        self.retranslateUi(ClearDialog)
+        QtCore.QMetaObject.connectSlotsByName(ClearDialog)
 
-    def retranslateUi(self, CloseDialog):
+    def retranslateUi(self, ClearDialog):
         _translate = QtCore.QCoreApplication.translate
-        CloseDialog.setWindowTitle(_translate("CloseDialog", "Programm schließen"))
-        self.t_close.setText(_translate("CloseDialog", "Soll das Programm wirklich geschlossen werden?"))
-        self.b_yes.setText(_translate("CloseDialog", "Ja"))
-        self.b_no.setText(_translate("CloseDialog", "Nein"))
+        ClearDialog.setWindowTitle(_translate("ClearDialog", "Eingabefelder leeren"))
+        self.t_clear.setText(_translate("ClearDialog", "Sollen die Eingabefelder geleert werden?"))
+        self.b_yes.setText(_translate("ClearDialog", "Ja"))
+        self.b_no.setText(_translate("ClearDialog", "Nein"))

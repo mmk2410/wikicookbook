@@ -10,13 +10,13 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_WikiCode(object):
-    def setupUi(self, WikiCode):
-        WikiCode.setObjectName("WikiCode")
-        WikiCode.resize(530, 643)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(WikiCode)
+class CodeDialog(object):
+    def setupUi(self, CodeDialog):
+        CodeDialog.setObjectName("CodeDialog")
+        CodeDialog.resize(530, 643)
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(CodeDialog)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.e_code = QtWidgets.QPlainTextEdit(WikiCode)
+        self.e_code = QtWidgets.QPlainTextEdit(CodeDialog)
         font = QtGui.QFont()
         font.setFamily("Monospace")
         self.e_code.setFont(font)
@@ -27,19 +27,19 @@ class Ui_WikiCode(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
-        self.b_copy = QtWidgets.QPushButton(WikiCode)
+        self.b_copy = QtWidgets.QPushButton(CodeDialog)
         self.b_copy.setObjectName("b_copy")
         self.horizontalLayout.addWidget(self.b_copy)
-        self.b_close = QtWidgets.QPushButton(WikiCode)
+        self.b_close = QtWidgets.QPushButton(CodeDialog)
         self.b_close.setObjectName("b_close")
         self.horizontalLayout.addWidget(self.b_close)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
-        self.retranslateUi(WikiCode)
-        QtCore.QMetaObject.connectSlotsByName(WikiCode)
+        self.retranslateUi(CodeDialog)
+        QtCore.QMetaObject.connectSlotsByName(CodeDialog)
 
-    def retranslateUi(self, WikiCode):
+    def retranslateUi(self, CodeDialog):
         _translate = QtCore.QCoreApplication.translate
-        WikiCode.setWindowTitle(_translate("WikiCode", "WikiCode"))
-        self.b_copy.setText(_translate("WikiCode", "Kopieren"))
-        self.b_close.setText(_translate("WikiCode", "Schließen"))
+        CodeDialog.setWindowTitle(_translate("CodeDialog", "CodeDialog"))
+        self.b_copy.setText(_translate("CodeDialog", "Kopieren"))
+        self.b_close.setText(_translate("CodeDialog", "Schließen"))

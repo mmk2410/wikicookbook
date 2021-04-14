@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_About(object):
+class AboutDialog(object):
     def setupUi(self, About):
         About.setObjectName("About")
         About.resize(400, 300)
